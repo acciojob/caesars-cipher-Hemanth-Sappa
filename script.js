@@ -38,7 +38,7 @@ function rot13(encodedStr) {
 	for(let i=0; i<encodedStr.length; i++) {
 		decodeddStr[i] = encodedStr.charAt(i);
 			if(encodedStr.charAt(i) == keys[i]) {
-			decodedArr[i] = keys[i];
+			decodedArr[i] = lookup.keys[i];
 		}	
 	}
 
