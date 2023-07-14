@@ -31,8 +31,8 @@ const lookup = {
   ",": ",",
 };
 
-	let A = charCodeAt("A");
-	let Z = charCodeAt("Z");
+	let A = "A".charCodeAt(0);
+	let Z = "Z".charCodeAt(0);
 
 function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
