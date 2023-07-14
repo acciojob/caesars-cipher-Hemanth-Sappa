@@ -36,10 +36,12 @@ function rot13(encodedStr) {
   // Only change code below this line
 	let keys = Object.keys(lookup);
 	for(let i=0; i<encodedStr.length; i++) {
-		decodeddStr[i] = encodedStr.charAt(i);
-			if(encodedStr.charAt(i) == keys[i]) {
-			decodedArr[i] = lookup.keys[i];
-		}	
+			if(encodedStr.charAt(i) === keys[i]) {
+			decodedArr[i] = lookup[encodedStr.charAt(i)];
+		}
+		else {
+			decodedArr[i] = encodedStr.charAt(i);
+		}
 	}
 
   return decodedArr; //return decodedArr
