@@ -42,7 +42,7 @@ function rot13(encodedStr) {
 		let currentChar = encodedStr.charCodeAt(i);
 		let char = encodedStr.charAt(i);
 		if(currentChar >= A && currentChar <= Z) {
-			decodedArr[i] = lookup[char[1]];
+			decodedArr[i] = lookup.char[1];
 		}
 		else {
 			decodedArr[i] = encodedStr.charAt(i);
