@@ -47,6 +47,7 @@ function rot13(encodedStr) {
 			decodedArr = encodedStr.charAt(i);
 		}
 	}
+	}
   return decodedArr; //return decodedArr
 }
 
