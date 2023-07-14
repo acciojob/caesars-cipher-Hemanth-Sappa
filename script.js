@@ -31,17 +31,22 @@ const lookup = {
   ",": ",",
 };
 
+	let A = charCodeAt("A");
+	let Z = charCodeAt("Z");
+
 function rot13(encodedStr) {
   let decodedArr = []; // Your Result goes here
   // Only change code below this line
-	let keys = Object.keys(lookup);
 	for(let i=0; i<encodedStr.length; i++) {
-			if(encodedStr.charAt(i) === keys[i]) {
-			decodedArr[i] = lookup[encodedStr.charAt(i)];
+		let currentChar = encodedStr.charCodeAt(i);
+
+		if(currentChar >= A && currentChar <= Z) {
+			decodedArr = lookup[encodedStr.charAt(i)];
 		}
 		else {
-			decodedArr[i] = encodedStr.charAt(i);
+			decodedArr = encodedStr.charAt(i);
 		}
+	}
 	}
 
   return decodedArr; //return decodedArr
